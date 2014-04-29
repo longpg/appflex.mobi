@@ -1,0 +1,4 @@
+[22-Mar-2014 08:01:26 America/Chicago] PHP Fatal error:  Class 'GDSRDBMulti' not found in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/tools/tools_bulk.php on line 1
+[22-Mar-2014 08:01:26 America/Chicago] PHP Fatal error:  Call to undefined function _e() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/tools/tools_db.php on line 2
+[22-Mar-2014 08:01:26 America/Chicago] PHP Fatal error:  Call to undefined function __() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/tools/tools_editcss.php on line 12
+[22-Mar-2014 08:01:27 America/Chicago] PHP Fatal error:  Call to undefined function _e() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/tools/tools_cleanup.php on line 2

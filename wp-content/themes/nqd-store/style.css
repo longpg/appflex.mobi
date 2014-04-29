@@ -1,0 +1,29 @@
+/*
+Theme Name: NQD Store
+Theme URI: http://nqdung.com/
+Author: Nguyễn Quốc Dũng
+Author URI: http://nqdung.com
+Description: Theme sử dụng flat design & bootstrap 3
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Text Domain: nqd-store
+Domain Path: /languages/
+Tags: appstore,NQD-Store,giao diện appstore cho wordpress
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ NQD Store is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+@import url("assets/css/bootstrap.min.css");
+@import url("assets/css/font-awesome.min.css");
+@import url("assets/css/nqd-store.css");
+.navbar-header .navbar-h1{
+	margin:0;
+}

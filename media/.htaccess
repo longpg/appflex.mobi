@@ -1,0 +1,3 @@
+RewriteEngine On  
+RewriteBase /media/  
+RewriteRule ^resizer/(.*)x(.*)/r/(.*) resizer/timthumb.php?src=http://$3&h=$2&w=$1&zc=1  

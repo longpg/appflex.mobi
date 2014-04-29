@@ -1,0 +1,2 @@
+[22-Mar-2014 08:01:12 America/Chicago] PHP Fatal error:  Call to undefined function _e() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/ips/ips_options.php on line 2
+[22-Mar-2014 08:01:12 America/Chicago] PHP Fatal error:  Class 'gdsrAdmDB' not found in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/ips/ips_list.php on line 16

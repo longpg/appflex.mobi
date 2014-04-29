@@ -1,0 +1,4 @@
+[22-Mar-2014 08:01:12 America/Chicago] PHP Fatal error:  Call to undefined function gd_get_multi_set() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/multis/results_post.php on line 15
+[22-Mar-2014 08:01:13 America/Chicago] PHP Fatal error:  Call to undefined function _e() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/multis/results_set.php on line 18
+[22-Mar-2014 08:01:13 America/Chicago] PHP Fatal error:  Call to undefined function gd_get_multi_set() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/multis/editor.php on line 9
+[22-Mar-2014 08:01:13 America/Chicago] PHP Fatal error:  Class 'GDSRDBMulti' not found in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/multis/sets.php on line 27

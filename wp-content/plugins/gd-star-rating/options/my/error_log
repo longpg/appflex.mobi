@@ -1,0 +1,4 @@
+[22-Mar-2014 08:01:14 America/Chicago] PHP Fatal error:  Class 'gdsrAdmDB' not found in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/my/my_general.php on line 4
+[22-Mar-2014 08:01:14 America/Chicago] PHP Fatal error:  Call to undefined function _e() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/my/my_posts.php on line 2
+[22-Mar-2014 08:01:14 America/Chicago] PHP Fatal error:  Call to undefined function _e() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/my/my_voted.php on line 2
+[22-Mar-2014 08:01:16 America/Chicago] PHP Fatal error:  Call to undefined function _e() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/my/my_comments.php on line 2

@@ -1,0 +1,2 @@
+[22-Mar-2014 08:01:04 America/Chicago] PHP Fatal error:  Call to undefined function _e() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/builder/shortcode.php on line 3
+[22-Mar-2014 08:01:05 America/Chicago] PHP Fatal error:  Call to undefined function _e() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/builder/settings.php on line 3

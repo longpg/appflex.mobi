@@ -1,0 +1,4 @@
+[22-Mar-2014 08:01:15 America/Chicago] PHP Fatal error:  Call to undefined function _e() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/gfx/gfx_preview.php on line 2
+[22-Mar-2014 08:01:15 America/Chicago] PHP Fatal error:  Call to undefined function _e() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/gfx/gfx_stars.php on line 2
+[22-Mar-2014 08:01:16 America/Chicago] PHP Fatal error:  Call to undefined function _e() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/gfx/gfx_thumbs.php on line 2
+[22-Mar-2014 08:01:17 America/Chicago] PHP Fatal error:  Call to undefined function _e() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/options/gfx/gfx_tools.php on line 2

@@ -1,0 +1,4 @@
+[22-Mar-2014 08:02:01 America/Chicago] PHP Fatal error:  Call to undefined function _e() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/widgets/comments_28/part_basic.php on line 3
+[22-Mar-2014 08:02:01 America/Chicago] PHP Fatal error:  Using $this when not in object context in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/widgets/comments_28/part_filter.php on line 1
+[22-Mar-2014 08:02:02 America/Chicago] PHP Fatal error:  Using $this when not in object context in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/widgets/comments_28/part_image.php on line 1
+[22-Mar-2014 08:02:02 America/Chicago] PHP Fatal error:  Using $this when not in object context in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/widgets/comments_28/part_stars.php on line 1

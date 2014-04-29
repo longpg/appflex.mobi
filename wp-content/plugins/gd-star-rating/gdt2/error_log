@@ -1,0 +1,8 @@
+[22-Mar-2014 07:58:50 America/Chicago] PHP Fatal error:  Call to undefined function _e() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/gdt2/form_defaults.php on line 5
+[22-Mar-2014 07:58:51 America/Chicago] PHP Fatal error:  Call to a member function list_sections_assoc() on a non-object in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/gdt2/form_dependencies.php on line 3
+[22-Mar-2014 07:58:51 America/Chicago] PHP Fatal error:  Call to undefined function _e() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/gdt2/form_editor.php on line 1
+[22-Mar-2014 07:58:52 America/Chicago] PHP Fatal error:  Call to undefined function _e() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/gdt2/form_files.php on line 2
+[22-Mar-2014 07:58:52 America/Chicago] PHP Fatal error:  Call to a member function list_sections_assoc() on a non-object in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/gdt2/form_dependencies.php on line 3
+[22-Mar-2014 07:58:52 America/Chicago] PHP Fatal error:  Class 'gdTemplateDB' not found in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/gdt2/form_list.php on line 21
+[22-Mar-2014 07:58:52 America/Chicago] PHP Fatal error:  Call to undefined function _e() in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/gdt2/form_editor.php on line 1
+[22-Mar-2014 07:58:52 America/Chicago] PHP Fatal error:  Class 'gdTemplateDB' not found in /home3/gamejava/public_html/webroot/Gamehot/wp-content/plugins/gd-star-rating/gdt2/form_list.php on line 21
