@@ -93,7 +93,6 @@ function _post_app_by_url($url, $category)
     );
     $post_id = wp_insert_post($post, $wp_error);
     $prefix = '_infomation_';
-//    echo "<br /><h1>Preview</h1><hr />";
     foreach ($game as $key => $value) {
         if ((empty($value) && $key != "link_image") || ($key == "link_image" && !count($value)))
             continue;
@@ -108,26 +107,19 @@ function _post_app_by_url($url, $category)
         $count = count($filePath);
         $fileText = get_site_url()."/wp-content/uploads"."/".$filePath[$count-3]."/".$filePath[$count-2]."/".$filePath[$count-1];
         if ($key == "link_image") {
-//            echo "<h2>images</h2><div>";
             $i = 0;
             foreach ($value as $src) {
                 $filename = time()."".$i.".jpg";
-//                echo "<img src='{$src}' />";
                 $src = str_replace("https:/", "http:/", $src);
                 $image_data = file_get_contents($src);
                 file_put_contents($file."".$filename, $image_data);
                 $value[$i] = $fileText."".$filename;
                 $i++;
             }
-//            echo "</div>";
 
         } else {
-//            echo "<h2>{$key}</h2><div>{$value}</div><hr />";
         }
         add_post_meta($post_id, $prefix . $key, $value);
-    }
-    if (!empty($content)) {
-//        echo "<h2>description</h2><div>{$content}</div>";
     }
 
     // Add Featured Image to Post
@@ -207,57 +199,57 @@ function _post_app_by_url($url, $category)
     }
     return $urlreturns;
 }
+
+require_once( ABSPATH . 'wp-admin/admin-header.php' );
 ?>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    </head>
-    <body>
-        <form action="postgame.php" method="post">
-            <?php $tax = get_taxonomy('category'); ?>
-            <div id="categorydiv" class="postbox">
-                <h3 class="hndle"><?php _e('Categories') ?></h3>
-                <div class="inside">
-                    <div id="taxonomy-category" class="categorydiv">
-                        <div id="category-all" class="tabs-panel">
-                            <ul id="categorychecklist" data-wp-lists="list:category" class="categorychecklist form-no-clear">
-                                <?php wp_terms_checklist($post_ID, array('taxonomy' => 'category', 'popular_cats' => $popular_ids)) ?>
-                            </ul>
-                        </div>
+<div class="wrap">
+    <h2>Google play Category Import</h2>
+    <form action="postgame.php" method="post">
+        <?php $tax = get_taxonomy('category'); ?>
+        <div id="categorydiv" class="postbox">
+            <div class="inside">
+                <b><?php _e('Destination Categories:') ?></b>
+                <div id="taxonomy-category" class="categorydiv">
+                    <div id="category-all" class="tabs-panel">
+                        <ul id="categorychecklist" data-wp-lists="list:category" class="categorychecklist form-no-clear">
+                            <?php wp_terms_checklist($post_ID, array('taxonomy' => 'category', 'popular_cats' => $popular_ids)) ?>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <input style="width: 50%;" type="text" name="url" placeholder="Paste google play category link here!" />
-            <input type="text" name="limit" placeholder="Limit number" />
-            <button type="submit">Submit</button>
-            <p><b>HINT:</b></p>
-            <p>-<i>Google play link example: <u>https://play.google.com/store/apps/category/GAME_STRATEGY</u></i></p>
-            <p>-<i>Entering limit number to limitting number of apps (FREE or PAID) that will be imported. Default limit: <b>60</b> (60 FREE + 60 PAID), max acceptable limit: <b>119</b></i></p>
-            <hr>
-        </form>
-        <?php
-        if($_POST['post_category']){
-            $idJoined = implode(", ",$_POST['post_category']);
-            if (isset($_POST['url']) && !empty($_POST['url'])){
-                $url = $_POST['url'];
-                $urls = _category_url_to_app_urls($url,$_POST['limit']);
-                $success=0;
-                $falure=0;
-                foreach($urls as $appUrl){
-                    if(_post_app_by_url($appUrl, $_POST['post_category'])) {
-                        $success++;
-                    }else{
-                        $falure++;
-                    }
-                }
-                echo "{$success} products have been added to category {$idJoined}";
-                if($falure>0) echo ", {$falure} failed";
-            } else {
-                echo "URL shouldn't be empty!";
+        </div>
+        <input style="width: 50%;" type="text" name="url" placeholder="Paste google play category link here!" />
+        <input type="text" name="limit" placeholder="Limit number" />
+        <button type="submit">Submit</button>
+        <p><b>HINT:</b></p>
+        <p>-<i>Google play link example: <u>https://play.google.com/store/apps/category/GAME_STRATEGY</u></i></p>
+        <p>-<i>Entering limit number to limitting number of apps (FREE or PAID) that will be imported. Default limit: <b>60</b> (60 FREE + 60 PAID), max acceptable limit: <b>119</b></i></p>
+        <hr>
+    </form>
+</div>
+
+<?php
+if($_POST['post_category']){
+    $idJoined = implode(", ",$_POST['post_category']);
+    if (isset($_POST['url']) && !empty($_POST['url'])){
+        $url = $_POST['url'];
+        $urls = _category_url_to_app_urls($url,$_POST['limit']);
+        $success=0;
+        $falure=0;
+        foreach($urls as $appUrl){
+            if(_post_app_by_url($appUrl, $_POST['post_category'])) {
+                $success++;
+            }else{
+                $falure++;
             }
-        }else{
-            echo "Please choose a destination category and continue!";
         }
-        ?>
-    </body>
-</html>
+        echo "{$success} products have been added to category {$idJoined}";
+        if($falure>0) echo ", {$falure} failed";
+    } else {
+        echo "URL shouldn't be empty!";
+    }
+}else{
+    echo "Please choose a destination category and continue!";
+}
+include( ABSPATH . 'wp-admin/admin-footer.php' );
+?>
