@@ -225,6 +225,11 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
         <p>-<i>Google play link example: <u>https://play.google.com/store/apps/category/GAME_STRATEGY</u></i></p>
         <p>-<i>Entering limit number to limitting number of apps (FREE or PAID) that will be imported. Default limit: <b>60</b> (60 FREE + 60 PAID), max acceptable limit: <b>119</b></i></p>
         <hr>
+        <br>
+        <h2>Single App Import</h2>
+        <input style="width: 63%;" type="text" name="product_url" placeholder="Paste google play app link here!" />
+        <button type="submit">Submit</button>
+        <p></p>
     </form>
 </div>
 
@@ -243,13 +248,16 @@ if($_POST['post_category']){
                 $falure++;
             }
         }
-        echo "{$success} products have been added to category {$idJoined}";
+        echo "<p style='color:green'>{$success} apps have been added to category {$idJoined}</p>";
         if($falure>0) echo ", {$falure} failed";
+    } else if ($_POST['product_url']) {
+        if(_post_app_by_url($_POST['product_url'], $_POST['post_category']))
+            echo "<p style='color:green'>The app at this url: <i><u>{$_POST['product_url']}</u></i> has been successfully added to category {$idJoined}</p>";
     } else {
-        echo "URL shouldn't be empty!";
+        echo "<p style='color:red'>URL shouldn't be empty!</p>";
     }
 }else{
-    echo "Please choose a destination category and continue!";
+    if ($_POST) echo "<p style='color:red'>Please choose a destination category and continue!</p>";
 }
 include( ABSPATH . 'wp-admin/admin-footer.php' );
 ?>
